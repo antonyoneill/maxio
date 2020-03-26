@@ -155,7 +155,7 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                 #print('Unexpected value at offset {}'.format(offset - 12))
             if pen == 0 or pen == 1:
                 pass # Dynamic width, will be truncated into several strokes
-            elif pen == 2 or pen == 4: # Pen / Fineliner
+            elif pen == 2 or pen == 4 or pen==15 or pen==17: # Pen / Fineliner
                 width = 32 * width * width - 116 * width + 107
             elif pen == 3: # Marker
                 width = 64 * width - 112
